@@ -10,8 +10,7 @@ from selenium.webdriver.support import expected_conditions as EC
 import random
 import pyautogui
 
-# 
-input('x = ')
+
 current_date = datetime.now()
 intended_date = current_date + timedelta(days=2)
 intended_date_date_str = intended_date.strftime('%Y-%m-%d')
@@ -102,9 +101,9 @@ date_box.send_keys(date)
 date_box.send_keys(Keys.ENTER)
 
 reason_wait = WebDriverWait(driver, 10)
-reason_wait.until(EC.presence_of_element_located((By.XPATH, '//*[@id="uuid-58"]/div/div/div[3]/div/div[2]/div/div[1]/div/div/div[x]/div[9]/div/div/div/div')))
+reason_wait.until(EC.presence_of_element_located((By.XPATH, '//*[@id="uuid-58"]/div/div/div[3]/div/div[2]/div/div[1]/div/div/div[1]/div[9]/div/div/div/div')))
 '''원하는 시간의 버스 사유신청 창 xpath'''
-reason = driver.find_element(By.XPATH, '//*[@id="uuid-58"]/div/div/div[3]/div/div[2]/div/div[1]/div/div/div[x]/div[9]/div/div/div/div')
+reason = driver.find_element(By.XPATH, '//*[@id="uuid-58"]/div/div/div[3]/div/div[2]/div/div[1]/div/div/div[1]/div[9]/div/div/div/div')
 reason.click()
 
 '''원하는 시간의 버스 사유신청 창 입력내용'''
